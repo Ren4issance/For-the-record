@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+body {
+  background-color: rgb(28, 26, 26);
+  color: rgb(235, 219, 219);
+  font-family: "Merriweather", serif;
+  padding: 0;
+  margin: 0;
+}
+section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  align-content: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+.intro {
+  font-size: 1rem; /* Smaller, more subtle size */
+  color: #757575; /* A lighter color for subtlety */
+  margin: 0.5em 0; /* Space above and below */
+}
+
+.names {
+  font-size: 2.5rem; /* Larger font size for emphasis */
+  color: #ffffff; /* Darker color for prominence */
+  margin: 0.25em 0; /* Tighter spacing to group the names */
+}
+
+.surname {
+  font-size: 2rem; /* Slightly smaller than names, but still emphasized */
+  color: #f0f0f0; /* Darker color for prominence */
+  margin: 0.25em 0; /* Consistent spacing with names */
+}
+
+p {
+  max-width: 1000px;
+}
