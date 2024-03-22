@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/* * {
+  border: solid 2px red;
+} */
 body {
   background-color: rgb(28, 26, 26);
   color: rgb(235, 219, 219);
-  font-family: "Merriweather", serif;
+  font-family: "Playfair+Display", serif;
   padding: 0;
   margin: 0;
 }
@@ -14,6 +17,18 @@ section {
   min-height: 100vh;
   padding: 30px;
 }
+footer {
+  background-color: #333; /* A dark background */
+  color: #fff; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 20px 0; /* Some padding on the top and bottom */
+  font-size: 0.8em; /* A smaller font size than the default */
+  font-family: Arial, sans-serif; /* A simple, readable font */
+}
+footer p {
+  margin: 0; /* Remove default paragraph margin */
+}
+
 .intro {
   font-size: 1rem; /* Smaller, more subtle size */
   color: #757575; /* A lighter color for subtlety */
@@ -34,4 +49,22 @@ section {
 
 p {
   max-width: 1000px;
+}
+.main-photo {
+  border-radius: 10px;
+  max-width: 75vh;
+}
+.hidden {
+  opacity: 0;
+  transition: all 3s;
+  filter: blur(5px);
+}
+.show {
+  opacity: 1;
+  filter: blur(0);
+}
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }
