@@ -1,23 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-/* * {
-  border: solid 2px red;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+* {
+  /* border: solid 2px red; */
+  box-sizing: border-box;
+}
+html {
+  scroll-snap-type: y mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  /* max-height: 100vh; */
+}
 body {
   background-color: rgb(28, 26, 26);
   color: rgb(235, 219, 219);
-  font-family: "Playfair+Display", serif;
+  font-family: "Libre+Baskerville", serif;
   padding: 0;
   margin: 0;
+  /* overflow: hidden; */
 }
 section {
   display: grid;
+  position: relative;
   place-items: center;
   text-align: center;
   align-content: center;
   min-height: 100vh;
   padding: 30px;
+  margin: 5px;
+  scroll-snap-align: start;
+}
+section h2 {
+  font-size: 3em;
+}
+section p {
+  font-size: 1.5em;
+  /* font-family: "Libre+Baskerville"; */
 }
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #333; /* A dark background */
   color: #fff; /* White text color */
   text-align: center; /* Center the text */
@@ -27,36 +48,71 @@ footer {
 }
 footer p {
   margin: 0; /* Remove default paragraph margin */
+  text-align: center;
 }
 
+.tribute {
+  display: grid;
+  min-width: 100%;
+}
 .intro {
+  display: block;
   font-size: 1rem; /* Smaller, more subtle size */
   color: #757575; /* A lighter color for subtlety */
-  margin: 0.5em 0; /* Space above and below */
+  margin: 0 0 0 0px; /* Space above and below */
+  padding: 0;
+  text-align: center;
+  /* transform: translateX(15px); */
 }
-
 .names {
-  font-size: 2.5rem; /* Larger font size for emphasis */
+  /* font-family: "Merriweather"; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem; /* Larger font size for emphasis */
   color: #ffffff; /* Darker color for prominence */
   margin: 0.25em 0; /* Tighter spacing to group the names */
+  /* padding: 5px; */
 }
-
+.name1,
+.name2 {
+  flex: 1;
+}
+.ampersand {
+  flex: 0;
+}
+.name1,
+.name2,
+.ampersand {
+  margin: 0 10px;
+  padding: 0 2%;
+  /* display: inline-block; */
+  /* margin: 0; */
+}
+.name1 {
+  text-align: right;
+  /* padding-right: 25px; */
+}
+.name2 {
+  text-align: left;
+}
 .surname {
-  font-size: 2rem; /* Slightly smaller than names, but still emphasized */
+  /* font-family: "Merriweather"; */
+  font-size: 2.5rem; /* Slightly smaller than names, but still emphasized */
   color: #f0f0f0; /* Darker color for prominence */
   margin: 0.25em 0; /* Consistent spacing with names */
+  text-align: center;
 }
-
 p {
   max-width: 1000px;
 }
 .main-photo {
   border-radius: 10px;
-  max-width: 75vh;
+  max-width: 85vw;
 }
 .hidden {
   opacity: 0;
-  transition: all 2s ease-in;
+  transition: all 1s ease-in;
   filter: blur(5px);
 }
 .show {
